@@ -18,7 +18,7 @@
     background-color: #141c23;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: 20% repeat(5, 1fr);
     gap: 20px;
     padding: 2%;
     border-radius: 16px;
@@ -26,13 +26,14 @@
 
 #results {
     grid-area: 1 / 1 / span 1 / span 4;
+    background-color: #1c2934a9;
     color: #fff;
     border-radius: 10px;
     display: flex;
     justify-content: end;
     align-items: center;
     padding: 0 3%;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .cero {
@@ -70,7 +71,18 @@ button:active {
     #container {
         width: 100%;
         height: 100%;
+        border-radius: 0;
         padding: 8%;
         gap: 10px;
+        grid-template-rows: 30% repeat(5, 1fr);
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    #container {
+        width: 70%;
+        gap: 30px;
+        padding: 5%;
     }
 }
