@@ -73,13 +73,14 @@ function updateNum() {
     }
     else if (numOne !== null && numTwo !== null) {
         numOne = result;
-        numTwo = parseInt(valorVizualizacion)
+        numTwo = null;
         console.log(`Numero dsp del cambio ${numTwo}`)
     }
 }
 
 function displayResult() {
     if (numOne !== null && numTwo !== null) {
+        console.log(`Numero 1: ${numOne}   Numero 2: ${numTwo}`)
         valorVizualizacion = operate(operador, numOne, numTwo)
         resultBox.textContent = valorVizualizacion
     }
@@ -169,6 +170,5 @@ numberSign.addEventListener(`click`, function() {
         let simbolChange = resultBox.textContent = `-${valorVizualizacion}`
         valorVizualizacion = simbolChange
 
-        return 
     }
 })
