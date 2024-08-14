@@ -78,6 +78,8 @@ function updateNum() {
     }
 }
 
+
+
 function displayResult() {
     if (numOne !== null && numTwo !== null) {
         console.log(`Numero 1: ${numOne}   Numero 2: ${numTwo}`)
@@ -161,14 +163,28 @@ ac.addEventListener(`click`, function() {
 numberSign.addEventListener(`click`, function() {
 
     if (resultBox.textContent.includes('-')) {
+        
         valorVizualizacion = resultBox.textContent.replace("-", "");
-
+        
+        console.log(`Result: ${valorVizualizacion}`);
+        
+        if(result !== null) {
+            result = valorVizualizacion;
+        }
+    
         return resultBox.textContent = valorVizualizacion;
         
     }
     else {
-        let simbolChange = resultBox.textContent = `-${valorVizualizacion}`
-        valorVizualizacion = simbolChange
+        
+        valorVizualizacion = `-${valorVizualizacion}`;
+        console.log(`Result: ${valorVizualizacion}`)
+        if(result !== null) {
+            result = parseInt(valorVizualizacion);
+        }
+        
+
+        return resultBox.textContent = valorVizualizacion;
 
     }
 })
